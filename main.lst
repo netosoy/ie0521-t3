@@ -470,14 +470,14 @@ Disassembly of section .text:
     2240:	44 00 48 00 	l.jr r9
     2244:	15 00 00 00 	l.nop 0x0
 
-00002248 <main>:
+00002248 <main>:                                             //inicia la funcion "main"
     2248:	d7 e1 17 f8 	l.sw 0xfffffff8(r1),r2
     224c:	9c 41 00 00 	l.addi r2,r1,0x0
     2250:	d7 e1 4f fc 	l.sw 0xfffffffc(r1),r9
     2254:	9c 21 ff f0 	l.addi r1,r1,0xfffffff0
     2258:	9c 60 00 03 	l.addi r3,r0,0x3
     225c:	d4 01 18 00 	l.sw 0x0(r1),r3
-    2260:	9c 60 00 03 	l.addi r3,r0,0x3
+    2260:	9c 60 00 03 	l.addi r3,r0,0x3            //se cargan los enteros en GPRs (registros de proposito general)
     2264:	9c 80 00 01 	l.addi r4,r0,0x1
     2268:	9c a0 00 07 	l.addi r5,r0,0x7
     226c:	9c c0 00 02 	l.addi r6,r0,0x2
@@ -499,7 +499,7 @@ Disassembly of section .text:
     22ac:	44 00 48 00 	l.jr r9
     22b0:	15 00 00 00 	l.nop 0x0
 
-000022b4 <function>:
+000022b4 <function>:                                        //funcion llamada "function" desensamblada
     22b4:	d7 e1 17 fc 	l.sw 0xfffffffc(r1),r2
     22b8:	9c 41 00 00 	l.addi r2,r1,0x0
     22bc:	9c 21 ff e4 	l.addi r1,r1,0xffffffe4
