@@ -471,10 +471,10 @@ Disassembly of section .text:
     2244:	15 00 00 00 	l.nop 0x0
 
 00002248 <main>:                                             //inicia la funcion "main"
-    2248:	d7 e1 17 f8 	l.sw 0xfffffff8(r1),r2
+    2248:	d7 e1 17 f8 	l.sw 0xfffffff8(r1),r2       //suma valor inmediato con el contenido de r1
     224c:	9c 41 00 00 	l.addi r2,r1,0x0
     2250:	d7 e1 4f fc 	l.sw 0xfffffffc(r1),r9
-    2254:	9c 21 ff f0 	l.addi r1,r1,0xfffffff0
+    2254:	9c 21 ff f0 	l.addi r1,r1,0xfffffff0     //suma valor inmediato con el contenido de r1 y guarda en r1
     2258:	9c 60 00 03 	l.addi r3,r0,0x3
     225c:	d4 01 18 00 	l.sw 0x0(r1),r3
     2260:	9c 60 00 03 	l.addi r3,r0,0x3            //se cargan los enteros en GPRs (registros de proposito general)
@@ -490,7 +490,7 @@ Disassembly of section .text:
     2288:	d4 01 18 00 	l.sw 0x0(r1),r3
     228c:	18 60 00 01 	l.movhi r3,0x1
     2290:	a8 63 03 58 	l.ori r3,r3,0x358
-    2294:	04 00 03 e1 	l.jal 3218 <printf>
+    2294:	04 00 03 e1 	l.jal 3218 <printf>         //se calcula direccion de un salto
     2298:	15 00 00 00 	l.nop 0x0
     229c:	a9 63 00 00 	l.ori r11,r3,0x0
     22a0:	a8 22 00 00 	l.ori r1,r2,0x0
@@ -510,7 +510,7 @@ Disassembly of section .text:
     22d0:	d7 e2 3f e8 	l.sw 0xffffffe8(r2),r7
     22d4:	d7 e2 47 e4 	l.sw 0xffffffe4(r2),r8
     22d8:	84 62 00 00 	l.lwz r3,0x0(r2)
-    22dc:	bd a3 00 04 	l.sflesi r3,0x4
+    22dc:	bd a3 00 04 	l.sflesi r3,0x4            //si contenido de r3 <= que valor inmediato, levanta badera
     22e0:	10 00 00 0f 	l.bf 231c <function+0x68>
     22e4:	15 00 00 00 	l.nop 0x0
     22e8:	84 82 ff f8 	l.lwz r4,0xfffffff8(r2)
@@ -521,7 +521,7 @@ Disassembly of section .text:
     22fc:	84 62 ff ec 	l.lwz r3,0xffffffec(r2)
     2300:	e0 84 18 00 	l.add r4,r4,r3
     2304:	84 62 ff e8 	l.lwz r3,0xffffffe8(r2)
-    2308:	e0 84 18 02 	l.sub r4,r4,r3
+    2308:	e0 84 18 02 	l.sub r4,r4,r3             //a r4 le resta r3 y guarda en r4
     230c:	84 62 ff e4 	l.lwz r3,0xffffffe4(r2)
     2310:	e0 64 18 02 	l.sub r3,r4,r3
     2314:	00 00 00 0d 	l.j 2348 <function+0x94>
